@@ -1,6 +1,7 @@
 # TODO application
 [Open example](https://dmitrykolotilshikov.github.io/todo-app-func/)
 
+
 ## TODO application
 
 ```
@@ -14,5 +15,8 @@
     Приложение написано на (HTML | CSS | JavaScript)
     Функциональный подход
 ```
+
+![image](assets/todo_preview.jpg)
+
 ---
 © [Dmitry Kolotilshikov](https://github.com/DmitryKolotilshikov)
