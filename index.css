@@ -1,5 +1,5 @@
-@import url('./styles/_variables.css');
-@import url('./styles/_basic.css');
-@import url('./styles/_btn.css');
-@import url('./styles/_todoControls.css');
-@import url('./styles/_todoItem.css');
+@import url('./styles/variables.css');
+@import url('./styles/basic.css');
+@import url('./styles/btn.css');
+@import url('./styles/todoControls.css');
+@import url('./styles/todoItem.css');
