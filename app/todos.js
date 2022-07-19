@@ -59,9 +59,9 @@ function createTodoItem(id, completed, text, date) {
     const checkbox = todoElement.querySelector('[data-input-complete-checkbox]');
     checkbox.checked = completed;
     const todoDescription = todoElement.querySelector('[data-todo-item-description]');
-    todoDescription.innerText = text;
+    todoDescription.textContent = text;
     const todoDate = todoElement.querySelector('[data-todo-item-date]');
-    todoDate.innerText = date;
+    todoDate.textContent = date;
     const todoRemoveBtn = todoElement.querySelector('[data-todo-item-delete-btn]');
 
     checkbox.addEventListener('change', (e) => {
@@ -95,8 +95,8 @@ function renderTodo() {
     }
 
     const todosCount = calculateTasksCount(todoList);
-    activeCount.innerText = todosCount.active;
-    completedCount.innerText = todosCount.completed;
+    activeCount.textContent = todosCount.active;
+    completedCount.textContent = todosCount.completed;
 }
 
 function renderFilteredTodo(todos) {
