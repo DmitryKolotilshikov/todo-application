@@ -1,5 +1,5 @@
 # TODO application
-[Open example](https://dmitrykolotilshikov.github.io/todo-app-func/)
+[RUN APPLICATION](https://dmitrykolotilshikov.github.io/todo-app-func/)
 
 
 ## TODO application
