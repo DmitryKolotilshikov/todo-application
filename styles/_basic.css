@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background: rgb(254, 251, 247);
+    background: radial-gradient(
+        circle,
+        rgba(254, 251, 247, 1) 60%,
+        rgba(255, 244, 226, 1) 100%
+    );
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+p {
+    margin: 0;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-block {
+    display: block;
+}

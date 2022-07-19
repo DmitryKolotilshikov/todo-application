@@ -1,0 +1,34 @@
+.btn {
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 1em;
+    user-select: none;
+    text-transform: uppercase;
+    color: var(--color-white);
+}
+
+.btn:focus {
+    outline: 2px solid var(--color-dark);
+}
+
+.btn:hover {
+    opacity: .85;
+    cursor: pointer;
+}
+
+.btn-add {
+    background-color: var(--btn-primary);
+}
+
+
+.btn-delete-all {
+    width: max(130px, 30%);
+    background-color: var(--btn-danger);
+}
+
+.btn-delete-completed {
+    width: max(170px, 35%);
+    background-color: var(--btn-warning);
+    color: var(--color-dark);
+}

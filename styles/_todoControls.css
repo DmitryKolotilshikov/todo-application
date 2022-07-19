@@ -1,0 +1,71 @@
+.todo-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.todo-controls__divider {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.todo-controls__info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.todo-controls__info-title {
+    font-size: .9rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.todo-controls__info-count {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.todo-controls__filter {
+    display: flex;
+    gap: 20px;
+}
+
+.todo-controls__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+
+.todo-controls__input-add,
+.todo-controls__input-filter {
+    width: 100%;
+    padding: .7em;
+    font-size: 1.2rem;
+    border: 1px solid #b0b0b0;
+    border-radius: 4px;
+}
+
+.todo-controls__input-checkbox:not(:checked) ~ .btn-delete-all,
+.todo-controls__input-checkbox:not(:checked) ~ .btn-delete-completed {
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+.todo-controls__input-checkbox {
+    width: 35px;
+    height: 35px;
+    accent-color: var(--btn-danger);
+}
+
+.todo-controls__input-add::placeholder,
+.todo-controls__input-filter::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--color-grey);
+}

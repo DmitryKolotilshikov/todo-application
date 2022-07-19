@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" type="module" defer></script>
+    <title>Todo App</title>
+</head>
+
+<body>
+    <div class="root">
+        <div class="container">
+            <div class="todo-controls">
+                <input type="text" placeholder="enter your todo" class="todo-controls__input-add" data-input-add-todo />
+                <button type="button" class="btn btn-add" data-add-todo-btn>
+                    add todo
+                </button>
+
+                <hr class="todo-controls__divider" />
+
+                <p class="todo-controls__info">
+                    <span class="todo-controls__info-title">
+                        Active:
+                        <span class="todo-controls__info-count" data-active-todo-count></span>
+                    </span>
+                    <span class="todo-controls__info-title">
+                        Completed:
+                        <span class="todo-controls__info-count" data-completed-todo-count></span>
+                    </span>
+                </p>
+
+                <div class="todo-controls__filter">
+                    <input type="text" placeholder="find your todo" class="todo-controls__input-filter"
+                        data-input-filter-todo />
+                </div>
+
+                <div class="todo-controls__buttons">
+                    <input type="checkbox" class="todo-controls__input-checkbox" />
+                    <button type="button" class="btn btn-delete-all" data-delete-all-btn>
+                        delete all
+                    </button>
+                    <button type="button" class="btn btn-delete-completed" data-delete-completed-btn>
+                        delete completed
+                    </button>
+                </div>
+            </div>
+
+            <div class="todos-list" data-todo-list-container></div>
+
+            <div class="no-todos" data-no-todo-items>
+                <h4>No todos ...</h4>
+            </div>
+        </div>
+    </div>
+
+    <template id="todo-template">
+        <section class="todo">
+            <input type="checkbox" class="todo__input-checkbox" data-input-complete-checkbox />
+            <div class="todo__content">
+                <p class="todo__description" data-todo-item-description>
+                    Lorem ipsum dolor sit amet.
+                </p>
+                <small class="todo__date" data-todo-item-date>date...</small>
+            </div>
+            <button type="button" class="btn btn-delete-item" data-todo-item-delete-btn>
+                x
+            </button>
+        </section>
+    </template>
+</body>
+
+</html>

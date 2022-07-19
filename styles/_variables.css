@@ -1,0 +1,11 @@
+:root {
+    --btn-success: #2c9a67;
+    --btn-primary: #5d9dfe;
+    --btn-warning: #ffc107;
+    --btn-danger: #dc3545;
+    --btn-light: #f8f9fa;
+
+    --color-white: #fff;
+    --color-grey: rgb(210, 210, 210);
+    --color-dark: rgb(38, 38, 38);
+}

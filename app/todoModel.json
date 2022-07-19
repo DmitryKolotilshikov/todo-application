@@ -1,0 +1,6 @@
+[
+    { "id": 1, "date": "", "completed": false, "text": "make housework"},
+    { "id": 2, "date": "", "completed": true, "text": "go shop"},
+    { "id": 3, "date": "", "completed": false, "text": "write application"},
+    { "id": 4, "date": "", "completed": false, "text": "make homework"}
+]
