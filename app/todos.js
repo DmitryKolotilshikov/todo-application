@@ -20,10 +20,12 @@ addTodoBtn.addEventListener('click', () => {
 });
 
 filterInput.addEventListener('input', () => {
-    if (filterInput.value.trim()) {
-        const filterTodoList = todoList.filter( el => el.text.includes(filterInput.value.trim()));
+    const searchValue = filterInput.value.trim();
+
+    if (searchValue) {
+        const filterTodoList = todoList.filter( el => el.text.includes(searchValue));
         renderWithoutSaving(filterTodoList);
-    }else {
+    } else {
         renderAndSave(todoList);
     }
 })
