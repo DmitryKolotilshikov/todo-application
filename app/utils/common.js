@@ -10,9 +10,7 @@ export const getStringDate = (
 }
 
 export const clearList = (element) => {
-    while(element.firstChild) {
-        element.removeChild(element.firstChild)
-    }
+    element.innerHTML = '';
 }
 
 export const calculateTasksCount = (todos) => {
