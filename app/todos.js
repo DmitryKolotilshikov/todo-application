@@ -37,8 +37,13 @@ deleteAllBtn.addEventListener('click', () => {
 });
 
 deleteCompletedBtn.addEventListener('click', () => {
-    todoList = todoList.filter( el => !el.completed);
-    renderAndSave(todoList);
+    const todos = todoListContainer.querySelectorAll('[data-input-complete-checkbox]:checked');
+    todos.forEach(todo => todo.parentElement.classList.add('todo--remove'));
+    
+    todos[0].parentElement.addEventListener('transitionend', () => {
+        todoList = todoList.filter( el => !el.completed);
+        renderAndSave(todoList);
+    })
 });
 
 
@@ -76,11 +81,16 @@ function createTodoItem(id, completed, text, date) {
         renderAndSave(todoList);
     })
 
-    todoRemoveBtn.addEventListener('click', () => {
-        todoList = todoList.filter( item => item.id !== id );
-        renderAndSave(todoList);
+    todoRemoveBtn.addEventListener('click', (e) => {
+        const el = e.target.parentElement;
+        el.classList.add('todo--remove');
+        
+        el.addEventListener('transitionend', () => {
+            todoList = todoList.filter( item => item.id !== id );
+            renderAndSave(todoList);
+        });
     });
-
+        
     return todoElement;
 }
 
@@ -88,7 +98,7 @@ function renderTodo() {
     if(todoList.length) {
         todoList.forEach((el) => {
             const todoElement = createTodoItem(el.id, el.completed, el.text, el.date);
-            todoListContainer.appendChild(todoElement);
+            todoListContainer.append(todoElement);
         });
 
         noTodosElement.classList.add('display-none');
@@ -105,7 +115,7 @@ function renderFilteredTodo(todos) {
     if(todos.length) {
         todos.forEach( el => {
             const todoElement = createTodoItem(el.id, el.completed, el.text, el.date);
-            todoListContainer.appendChild(todoElement);
+            todoListContainer.append(todoElement);
         });
 
         noTodosElement.classList.add('display-none');
